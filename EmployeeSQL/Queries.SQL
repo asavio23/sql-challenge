@@ -12,11 +12,6 @@ SELECT e.first_name, e.last_name, e.hire_date
 FROM Employees AS e 
 WHERE e.hire_date BETWEEN '1986-01-01' AND '1986-12-31';
 
--- If the hire_date format isnt imported in the standard way 
--- SELECT e.first_name, e.last_name, e.hire_date 
--- FROM Employees AS e 
--- WHERE TO_DATE(e.hire_date, 'MM/DD/YYYY') BETWEEN '1986-01-01' AND '1986-12-31';
-
 3. List the manager of each department along with their department number, department name, employee number, last name, and first name.
 
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_no, dd.dept_name
