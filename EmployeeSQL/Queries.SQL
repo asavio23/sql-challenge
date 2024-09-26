@@ -15,18 +15,11 @@ WHERE e.hire_date BETWEEN '1986-01-01' AND '1986-12-31';
 3. List the manager of each department along with their department number, department name, employee number, last name, and first name.
 
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_no, dd.dept_name
-FROM dept_manager AS d
-JOIN employees AS e 
-    ON d.emp_no = e.emp_no
+FROM Employees AS e
+JOIN Dept_managers AS d 
+    ON e.emp_no = d.emp_no
 JOIN departments AS dd
     ON d.dept_no = dd.dept_no;
-
--- SELECT e.emp_no, e.last_name, e.first_name, d.dept_no, dd.dept_name
--- FROM dept_manager AS d
--- JOIN employees AS e 
---     ON d.emp_no = e.emp_no
--- JOIN departments AS dd
---     ON d.dept_no = dd.dept_no;
 
 
 4. List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
@@ -44,7 +37,7 @@ JOIN departments as d
 SELECT first_name, last_name, sex 
 FROM Employees
 WHERE first_name = 'HERCULES'
-AND last_name LIKE "B%";
+AND last_name LIKE 'B%';
 
 6. List each employee in the Sales department, including their employee number, last name, and first name.
 
