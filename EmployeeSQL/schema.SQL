@@ -1,3 +1,13 @@
+CREATE TABLE Departments (
+    Dept_no CHAR(5) PRIMARY KEY,
+    Dept_name VARCHAR(30) UNIQUE NOT NULL 
+);
+
+CREATE TABLE Titles (
+    Tile_id VARCHAR(5) PRIMARY KEY,
+    Tile VARCHAR(30) NOT NULL
+);
+
 CREATE TABLE Employees (
     Emp_no INT PRIMARY KEY,
     Emp_title_id VARCHAR(5) NOT NULL,
@@ -7,16 +17,6 @@ CREATE TABLE Employees (
     Sex VARCHAR(1),
     Hire_date DATE,
     FOREIGN KEY (Emp_title_id) REFERENCES Titles(Tile_id)
-);
-
-CREATE TABLE Departments (
-    Dept_no CHAR(5) PRIMARY KEY,
-    Dept_name VARCHAR(30) UNIQUE NOT NULL 
-);
-
-CREATE TABLE Titles (
-    Tile_id VARCHAR(5) PRIMARY KEY,
-    Tile VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE Salaries (
